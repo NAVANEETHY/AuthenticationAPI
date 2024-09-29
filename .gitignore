@@ -64,6 +64,7 @@ project.fragment.lock.json
 artifacts/
 */appsettings.json
 */Properties/launchSettings.json
+*/SQL/select_queries.sql
 
 # ASP.NET Scaffolding
 ScaffoldingReadMe.txt
