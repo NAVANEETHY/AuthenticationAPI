@@ -1,0 +1,36 @@
+USE AuthenticationDB
+
+
+CREATE PROCEDURE spCreateUser @Name VARCHAR(100), @Email VARCHAR(100), @Hash NVARCHAR(256), @Salt VARBINARY(128)
+AS
+BEGIN
+	INSERT INTO TBL_RJ_USER (Name, Email, Hash, Salt) VALUES (@Name, @Email, @Hash, @Salt)
+END
+
+
+CREATE PROCEDURE spGetHashSaltUser @Email VARCHAR(100)
+AS
+BEGIN
+	SELECT Hash, Salt FROM TBL_RJ_USER WHERE Email=@Email
+END
+
+
+CREATE PROCEDURE spGetUser @Email VARCHAR(100), @Hash NVARCHAR(256)
+AS
+BEGIN 
+	SELECT UserId, Name, Email FROM  TBL_RJ_USER WHERE Email=@Email AND Hash=@Hash
+END
+
+
+CREATE PROCEDURE spUpdateUser @UserId INT, @Name VARCHAR(100)
+AS
+BEGIN
+	UPDATE TBL_RJ_USER SET Name=@Name WHERE UserId=@UserId
+END
+
+
+CREATE PROCEDURE spDeleteUser @UserId INT
+AS
+BEGIN
+	DELETE FROM TBL_RJ_USER WHERE UserId=@UserId
+END
