@@ -5,8 +5,8 @@ namespace AuthenticationAPI.Services
 {
     public class PasswordService
     {
-        private int keySize = int.Parse(Environment.GetEnvironmentVariable("KEY_SIZE")); //64;
-        private int iterations = int.Parse(Environment.GetEnvironmentVariable("ITERATIONS")); //350000;
+        private int keySize = int.Parse(Environment.GetEnvironmentVariable("KEY_SIZE")); 
+        private int iterations = int.Parse(Environment.GetEnvironmentVariable("ITERATIONS")); 
         HashAlgorithmName algorithmName = HashAlgorithmName.SHA512;
 
         public string HashPassword(string password, out byte[] salt)
