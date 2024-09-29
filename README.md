@@ -1,6 +1,6 @@
 # AuthenticationAPI
 
-This project is a **User Authentication REST API** built using **ASP.NET Core Web API** with **MS SQL Server** as the database. The API uses **JWT (JSON Web Tokens)** for securing endpoints and provides user authentication and authorization. **SHA-512 hashing** is used for securely storing and verifying user passwords along with salt.
+This project is a user authentication **REST API** built using **ASP.NET Core Web API** with **MS SQL Server** as the database. The API uses **JWT (JSON Web Tokens)** for securing endpoints and provides user authentication and authorization. **SHA-512 hashing** is used for securely storing and verifying user passwords along with salt.
 
 ## Features
 
